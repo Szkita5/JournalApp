@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable, of, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
@@ -8,11 +8,83 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class ApiService {
 
-  constructor(private http: HttpClient) { }
+  private readonly baseHeaders: HttpHeaders;
+
+  constructor(private http: HttpClient) {
+    this.baseHeaders = new HttpHeaders({
+    });
+  }
 
   public getHeroes() {
-    return this.http.get<any>('http://localhost:8000/heroes/', ).subscribe(data => {
+    return this.get<any>('heroes/', `http://localhost:8000/heroes/`).subscribe(data => {
       console.log(data);
     });
+  }
+
+  public getHero(id: number) {
+    return this.get<any>('heroes/', `http://localhost:8000/heroes/${id}`).subscribe(data => {
+      console.log(data);
+    });
+  }
+
+
+  // ========================================================================
+  // Support routines
+  // ========================================================================
+
+  private get<T>(api: string, uri: string, queryParams: any = null): Observable<T> {
+    const params = this.setupParams(queryParams);
+    const headers = this.baseHeaders;
+
+    return this.http.get<T>(uri, {headers, params}).pipe(
+      catchError(err => this.handleError<T>(api, err))
+    );
+  }
+
+  private delete<T>(api: string, uri: string, queryParams: any = null): Observable<T> {
+    const params = this.setupParams(queryParams);
+    const headers = this.baseHeaders;
+
+    return this.http.delete<T>(uri, {headers, params}).pipe(
+      catchError(err => this.handleError<T>(api, err))
+    );
+  }
+
+  private post<T>(api: string, uri: string, body: any, queryParams: any = null): Observable<T> {
+    const params = this.setupParams(queryParams);
+    const headers = this.baseHeaders;
+
+    return this.http.post<T>(uri, body, {headers, params}).pipe(
+      catchError(err => this.handleError<T>(api, err))
+    );
+  }
+
+  private put<T>(api: string, uri: string, body: any, queryParams: any = null): Observable<T> {
+    const params = this.setupParams(queryParams);
+    const headers = this.baseHeaders;
+
+    return this.http.put<T>(uri, body, {headers, params}).pipe(
+      catchError(err => this.handleError<T>(api, err))
+    );
+  }
+
+
+  handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of<T>(result);
+    };
+  }
+
+  private setupParams(queryParams: any): HttpParams {
+    let params = new HttpParams();
+    if (queryParams) {
+      for (const key of Object.keys(queryParams)) {
+        if (queryParams[key] !== undefined) {
+          params = params.append(key, queryParams[key]);
+        }
+      }
+    }
+    return params;
   }
 }

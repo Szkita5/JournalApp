@@ -14,6 +14,8 @@ export class JournalHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getHeroes();
+
+    this.api.getHero(1);
   }
 
 }

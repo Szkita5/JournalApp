@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'JournalApp',
         'USER': 'geory',
-        'PASSWORD': os.getenv('DB_PW'),
+        'PASSWORD': 'Ger_023344',
         'HOST': 'localhost',
         'PORT': '3306',
     }

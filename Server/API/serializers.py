@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from .models import Hero
+from .models import Resource
 
 
-class HeroSerializer(serializers.HyperlinkedModelSerializer):
+class ResourceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Hero
-        fields = ('id', 'name', 'alias')
+        model = Resource
+        fields = ('id', 'name', 'link', 'date')
