@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'API.apps.ApiConfig',
 
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -75,6 +77,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Server.wsgi.application'
 
 
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200'
+]
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -83,7 +90,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'JournalApp',
         'USER': 'geory',
-        # 'PASSWORD': 'Ger_023344',
         'PASSWORD': os.getenv('DB_PW'),
         'HOST': 'localhost',
         'PORT': '3306',
