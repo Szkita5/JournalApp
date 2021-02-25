@@ -80,8 +80,13 @@ WSGI_APPLICATION = 'Server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'JournalDB',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'JournalApp',
+        'USER': 'geory',
+        # 'PASSWORD': 'Ger_023344',
+        'PASSWORD': os.getenv('DB_PW'),
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
