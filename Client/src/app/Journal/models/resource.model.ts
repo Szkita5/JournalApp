@@ -1,6 +1,7 @@
 export interface Resource {
   id: number;
-  resourceName: string;
-  resourceUrl: string;
+  name: string;
+  description: string;
+  url: string;
   dateCreated: Date;
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import {Resource} from "../app/journal/models/resource.model";
+import { Resource } from '../app/journal/models/resource.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +17,11 @@ export class ApiService {
   }
 
   public getResources() {
-    return this.get<Resource>('heroes/', `http://localhost:8000/api/resources/`).subscribe(data => {
-      console.log(data);
-    });
+    return this.get<Resource[]>('heroes/', `http://localhost:8000/api/resources/`);
   }
 
-  public getHero(id: number) {
-    return this.get<Resource>('heroes/', `http://localhost:8000/api/resources/${id}`).subscribe(data => {
-      console.log(data);
-    });
+  public getResource(id: number) {
+    return this.get<Resource>('heroes/', `http://localhost:8000/api/resources/${id}`);
   }
 
 

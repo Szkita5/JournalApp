@@ -6,4 +6,4 @@ from .models import Resource
 class ResourceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Resource
-        fields = ('id', 'resourceName', 'resourceUrl', 'dateCreated')
+        fields = ('id', 'name', 'description', 'url', 'dateCreated')
