@@ -1,19 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'journal-home',
   template: `
-    <p>works lul</p>
+    <journal-header></journal-header>
   `,
   styles: [``]
 })
 export class JournalHomeComponent implements OnInit {
 
+  @Input() bannerTitle = 'asd';
+  @Input() bannerSubtitle;
+
+  scrolled = false;
+
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getHeroes();
+    this.api.getResources();
 
     this.api.getHero(1);
   }

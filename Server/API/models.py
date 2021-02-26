@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Resource(models.Model):
-    name = models.CharField(max_length=120)
-    link = models.URLField()
-    date = models.DateField()
+    resourceName = models.CharField(max_length=120)
+    resourceUrl = models.URLField()
+    dateCreated = models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.resourceName
