@@ -1,7 +1,7 @@
 export interface Resource {
-  id: number;
+  id?: number;
   name: string;
-  description: string;
+  description?: string;
   url: string;
   dateCreated: Date;
 }

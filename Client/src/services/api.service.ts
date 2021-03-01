@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Resource } from '../app/journal/models/resource.model';
 
 @Injectable({
@@ -17,11 +17,20 @@ export class ApiService {
   }
 
   public getResources() {
-    return this.get<Resource[]>('heroes/', `http://localhost:8000/api/resources/`);
+    return this.get<Resource[]>('resources/', `http://localhost:8000/api/resources/`);
   }
 
   public getResource(id: number) {
-    return this.get<Resource>('heroes/', `http://localhost:8000/api/resources/${id}`);
+    return this.get<Resource>('resources/', `http://localhost:8000/api/resources/${id}/`);
+  }
+
+  public postResource(resource: Resource) {
+    console.log('posting', resource);
+    return this.post<Resource>('resources/', `http://localhost:8000/api/resources/`, resource);
+  }
+
+  public deleteResource(id: number) {
+    return this.delete('resources/', `http://localhost:8000/api/resources/${id}/`);
   }
 
 
@@ -32,22 +41,23 @@ export class ApiService {
   private get<T>(api: string, uri: string, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
+    const formattedUri = uri + '?format=json';
 
-    return this.http.get<T>(uri, {headers, params}).pipe(
+    return this.http.get<T>(formattedUri, {headers, params}).pipe(
       catchError(err => this.handleError<T>(api, err))
     );
   }
 
-  private delete<T>(api: string, uri: string, queryParams: any = null): Observable<T> {
+  private delete(api: string, uri: string, queryParams: any = null): Observable<any> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
 
-    return this.http.delete<T>(uri, {headers, params}).pipe(
-      catchError(err => this.handleError<T>(api, err))
+    return this.http.delete(uri, {headers, params}).pipe(
+      catchError(err => this.handleError(api, err))
     );
   }
 
-  private post<T>(api: string, uri: string, body: any, queryParams: any = null): Observable<T> {
+  private post<T>(api: string, uri: string, body: T, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
 
