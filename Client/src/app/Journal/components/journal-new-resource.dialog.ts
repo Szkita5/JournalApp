@@ -6,7 +6,6 @@ import { Resource } from '../models/resource.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'journal-new-resource-dialog',
   template: `
     <div class="modal-header">
       <h4 class="modal-title">New Resource</h4>
@@ -57,14 +56,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
       </div>
       <div class="modal-footer mt-3">
         <button type="button" class="btn btn-outline-primary" (click)="activeModal.dismiss()">Cancel</button>
-        <button type="submit" class="btn btn-primary" [disabled]="!'!resourceForm.valid'">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!resourceForm.valid">Submit</button>
       </div>
     </form>
 
   `,
   styles: []
 })
-export class NewResourceDialog implements OnInit {
+export class ResourceDialog implements OnInit {
   faTimes = faTimes;
   faCalendar = faCalendar;
   urlValid = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
@@ -82,6 +81,8 @@ export class NewResourceDialog implements OnInit {
 
   ngOnInit(): void {
 
+    console.log(this.resource);
+
     this.resource ??= {
       name: '',
       description: '',
@@ -93,13 +94,23 @@ export class NewResourceDialog implements OnInit {
       name: new FormControl(this.resource.name, [Validators.required, Validators.maxLength(80)]),
       description: new FormControl(this.resource.description, [Validators.maxLength(240)]),
       url: new FormControl(this.resource.url, [Validators.required, Validators.pattern(this.urlValid)]),
-      dateCreated: new FormControl(this.resource.dateCreated, [Validators.required])
+      dateCreated: new FormControl(this.getFormattedNgbDate(this.resource.dateCreated), [Validators.required])
     });
   }
 
   onSubmit(): void {
-    // this.resource = <Resource>this.resourceForm.value;
-    console.log(<Date>this.dateCreated.value);
-    // this.activeModal.close(this.resource);
+    const resourceId = this.resource.id | 0;
+    this.resource = <Resource>this.resourceForm.value;
+    this.resource.dateCreated = this.getFormattedDate(this.dateCreated.value);
+    if (resourceId) { this.resource.id = resourceId; }
+    this.activeModal.close(this.resource);
+  }
+
+  getFormattedDate(date: NgbDate): Date {
+    return new Date(date.year, date.month - 1, date.day);
+  }
+
+  getFormattedNgbDate(date: Date): NgbDate {
+    return new NgbDate(date.getFullYear(), date.getMonth(), date.getDay());
   }
 }

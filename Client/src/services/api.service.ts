@@ -16,21 +16,29 @@ export class ApiService {
     });
   }
 
-  public getResources() {
+  public getResources(): Observable<Resource[]> {
     return this.get<Resource[]>('resources/', `http://localhost:8000/api/resources/`);
   }
 
-  public getResource(id: number) {
+  public getResource(id: number): Observable<Resource> {
     return this.get<Resource>('resources/', `http://localhost:8000/api/resources/${id}/`);
   }
 
-  public postResource(resource: Resource) {
-    console.log('posting', resource);
+  public searchResources(searchString: string): Observable<Resource[]> {
+    return this.get<Resource[]>('resources/', `http://localhost:8000/api/resources/`, {search: searchString});
+  }
+
+  public addResource(resource: Resource): Observable<Resource> {
     return this.post<Resource>('resources/', `http://localhost:8000/api/resources/`, resource);
   }
 
-  public deleteResource(id: number) {
+  public deleteResource(id: number): Observable<any> {
     return this.delete('resources/', `http://localhost:8000/api/resources/${id}/`);
+  }
+
+  public updateResource(resource: Resource): Observable<Resource> {
+    const id = resource.id;
+    return this.put<Resource>('resources/', `http://localhost:8000/api/resources/${id}/`, resource);
   }
 
 
@@ -43,44 +51,28 @@ export class ApiService {
     const headers = this.baseHeaders;
     const formattedUri = uri + '?format=json';
 
-    return this.http.get<T>(formattedUri, {headers, params}).pipe(
-      catchError(err => this.handleError<T>(api, err))
-    );
+    return this.http.get<T>(formattedUri, {headers, params});
   }
 
   private delete(api: string, uri: string, queryParams: any = null): Observable<any> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
 
-    return this.http.delete(uri, {headers, params}).pipe(
-      catchError(err => this.handleError(api, err))
-    );
+    return this.http.delete(uri, {headers, params});
   }
 
   private post<T>(api: string, uri: string, body: T, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
 
-    return this.http.post<T>(uri, body, {headers, params}).pipe(
-      catchError(err => this.handleError<T>(api, err))
-    );
+    return this.http.post<T>(uri, body, {headers, params});
   }
 
   private put<T>(api: string, uri: string, body: any, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
     const headers = this.baseHeaders;
 
-    return this.http.put<T>(uri, body, {headers, params}).pipe(
-      catchError(err => this.handleError<T>(api, err))
-    );
-  }
-
-
-  handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error);
-      return of<T>(result);
-    };
+    return this.http.put<T>(uri, body, {headers, params});
   }
 
   private setupParams(queryParams: any): HttpParams {
