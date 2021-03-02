@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JournalHeaderComponent } from './components/journal-header.component';
 import { JournalEntryComponent } from './components/journal-entry.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NewResourceDialog } from './components/journal-new-resource.dialog';
+import { ResourceDialog } from './components/journal-new-resource.dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     JournalHomeComponent,
     JournalHeaderComponent,
     JournalEntryComponent,
-    NewResourceDialog,
+    ResourceDialog,
   ],
   imports: [
     CommonModule,
@@ -25,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   entryComponents: [
-    NewResourceDialog,
+    ResourceDialog,
   ]
 })
 export class JournalModule { }

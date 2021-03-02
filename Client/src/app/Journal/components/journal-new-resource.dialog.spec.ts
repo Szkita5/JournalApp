@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewResourceDialog } from './journal-new-resource.dialog';
+import { ResourceDialog } from './journal-new-resource.dialog';
 
 describe('JournalNewResourceDialogComponent', () => {
-  let component: NewResourceDialog;
-  let fixture: ComponentFixture<NewResourceDialog>;
+  let component: ResourceDialog;
+  let fixture: ComponentFixture<ResourceDialog>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewResourceDialog ]
+      declarations: [ ResourceDialog ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewResourceDialog);
+    fixture = TestBed.createComponent(ResourceDialog);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

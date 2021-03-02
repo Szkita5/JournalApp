@@ -1,4 +1,7 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { fromEvent } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'journal-header',
@@ -10,11 +13,16 @@ import { Component, Input, OnInit} from '@angular/core';
             <a class="navbar-brand">Journal</a>
             <div class="collapse navbar-collapse">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page">Home</a>
+                <a class="nav-link active" aria-current="page">Resources</a>
                 <a class="nav-link">Features</a>
-                <a class="nav-link">Pricing</a>
+                <a class="nav-link">New resource</a>
               </div>
             </div>
+              <form class="form-inline">
+                <span class="row m-0">
+                  <input class="form-control col-sm" type="search" placeholder="Search" #input>
+                </span>
+              </form>
           </div>
         </nav>
       </div>
@@ -23,13 +31,25 @@ import { Component, Input, OnInit} from '@angular/core';
   styles: [`
   `]
 })
-export class JournalHeaderComponent implements OnInit {
+export class JournalHeaderComponent implements AfterViewInit {
+  faSearch = faSearch;
 
   @Input() height = '3rem';
+  @Output() search = new EventEmitter<string>();
+  @Output() newResource = new EventEmitter();
+
+  @ViewChild('input', {static: true}) input: ElementRef;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    fromEvent(this.input.nativeElement, 'keyup').pipe (
+      filter(Boolean),
+      debounceTime(150),
+      distinctUntilChanged()
+    ).subscribe(() => {
+      this.search.emit(this.input.nativeElement.value);
+    });
   }
 
 }
