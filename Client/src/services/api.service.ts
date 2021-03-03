@@ -1,44 +1,47 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Resource } from '../app/journal/models/resource.model';
+import { UserLoginForm } from '../app/journal/models/user.model';
+import { AuthenticationService } from './authentication.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private readonly baseHeaders: HttpHeaders;
+  private readonly baseUrl = 'http://localhost:8000/';
 
-  constructor(private http: HttpClient) {
-    this.baseHeaders = new HttpHeaders({
-    });
+  constructor(private http: HttpClient, private auth: AuthenticationService) {
   }
 
   public getResources(): Observable<Resource[]> {
-    return this.get<Resource[]>('resources/', `http://localhost:8000/api/resources/`);
+    return this.get<Resource[]>('resources/', `api/resources/`);
   }
 
   public getResource(id: number): Observable<Resource> {
-    return this.get<Resource>('resources/', `http://localhost:8000/api/resources/${id}/`);
+    return this.get<Resource>('resources/', `api/resources/${id}/`);
   }
 
   public searchResources(searchString: string): Observable<Resource[]> {
-    return this.get<Resource[]>('resources/', `http://localhost:8000/api/resources/`, {search: searchString});
+    return this.get<Resource[]>('resources/', `api/resources/`, {search: searchString});
   }
 
   public addResource(resource: Resource): Observable<Resource> {
-    return this.post<Resource>('resources/', `http://localhost:8000/api/resources/`, resource);
+    return this.post<Resource>('resources/', `api/resources/`, resource);
   }
 
   public deleteResource(id: number): Observable<any> {
-    return this.delete('resources/', `http://localhost:8000/api/resources/${id}/`);
+    return this.delete('resources/', `api/resources/${id}/`);
   }
 
   public updateResource(resource: Resource): Observable<Resource> {
     const id = resource.id;
-    return this.put<Resource>('resources/', `http://localhost:8000/api/resources/${id}/`, resource);
+    return this.put<Resource>('resources/', `api/resources/${id}/`, resource);
+  }
+
+  public login(loginDetails: UserLoginForm): Observable<any> {
+    return this.post<UserLoginForm>('auth/login/', `auth/login/`, loginDetails);
   }
 
 
@@ -48,31 +51,34 @@ export class ApiService {
 
   private get<T>(api: string, uri: string, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
-    const headers = this.baseHeaders;
-    const formattedUri = uri + '?format=json';
+    const headers = {'Authorization': 'Token ' + this.auth.getAuthToken()};
+    const formattedUri = this.baseUrl + uri + '?format=json';
 
     return this.http.get<T>(formattedUri, {headers, params});
   }
 
   private delete(api: string, uri: string, queryParams: any = null): Observable<any> {
     const params = this.setupParams(queryParams);
-    const headers = this.baseHeaders;
+    const headers = {'Authorization': 'Token ' + this.auth.getAuthToken()};
+    const formattedUri = this.baseUrl + uri;
 
-    return this.http.delete(uri, {headers, params});
+    return this.http.delete(formattedUri, {headers, params});
   }
 
   private post<T>(api: string, uri: string, body: T, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
-    const headers = this.baseHeaders;
+    const headers = {'Authorization': 'Token ' + this.auth.getAuthToken()};
+    const formattedUri = this.baseUrl + uri;
 
-    return this.http.post<T>(uri, body, {headers, params});
+    return this.http.post<T>(formattedUri, body, {headers, params});
   }
 
   private put<T>(api: string, uri: string, body: any, queryParams: any = null): Observable<T> {
     const params = this.setupParams(queryParams);
-    const headers = this.baseHeaders;
+    const headers = {'Authorization': 'Token ' + this.auth.getAuthToken()};
+    const formattedUri = this.baseUrl + uri;
 
-    return this.http.put<T>(uri, body, {headers, params});
+    return this.http.put<T>(formattedUri, body, {headers, params});
   }
 
   private setupParams(queryParams: any): HttpParams {

@@ -1,8 +1,8 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .serializers import ResourceSerializer
 from .models import Resource
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters
+from rest_framework import filters, authentication
+from auth.permissions import IsOwner
 
 
 class ResourceViewSet(viewsets.ModelViewSet):
@@ -10,3 +10,8 @@ class ResourceViewSet(viewsets.ModelViewSet):
     serializer_class = ResourceSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['name', 'description']
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated, IsOwner]
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)

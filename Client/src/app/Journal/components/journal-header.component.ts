@@ -1,7 +1,10 @@
 import { Component, Input, Output, EventEmitter, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { fromEvent } from 'rxjs';
-import { debounceTime, distinctUntilChanged, filter, tap } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
+import { AuthenticationService } from '../../../services/authentication.service';
+import { User } from '../models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'journal-header',
@@ -13,16 +16,27 @@ import { debounceTime, distinctUntilChanged, filter, tap } from 'rxjs/operators'
             <a class="navbar-brand">Journal</a>
             <div class="collapse navbar-collapse">
               <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page">Resources</a>
+                <a class="nav-link active" aria-current="page" [routerLink]="'/journal/'">Resources</a>
                 <a class="nav-link">Features</a>
                 <a class="nav-link">New resource</a>
               </div>
             </div>
-              <form class="form-inline">
-                <span class="row m-0">
-                  <input class="form-control col-sm" type="search" placeholder="Search" #input>
-                </span>
-              </form>
+            <form class="form-inline">
+              <span class="row mx-2">
+                <input class="form-control col-sm" type="search" placeholder="Search" #input>
+              </span>
+            </form>
+            <span class="ml-2">
+              <button *ngIf="!getCurrentUser().token" class="btn btn-primary ml-2" [routerLink]="'/login/'">
+                Login
+              </button>
+              <div *ngIf="getCurrentUser().token" ngbDropdown class="d-inline-block">
+                <button class="btn btn-secondary" id="dropdownBasic1" ngbDropdownToggle>{{getCurrentUser().username}}</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem (click)="logout()">Logout</button>
+                </div>
+              </div>
+            </span>
           </div>
         </nav>
       </div>
@@ -40,7 +54,7 @@ export class JournalHeaderComponent implements AfterViewInit {
 
   @ViewChild('input', {static: true}) input: ElementRef;
 
-  constructor() { }
+  constructor(private auth: AuthenticationService, private router: Router) { }
 
   ngAfterViewInit(): void {
     fromEvent(this.input.nativeElement, 'keyup').pipe (
@@ -50,6 +64,15 @@ export class JournalHeaderComponent implements AfterViewInit {
     ).subscribe(() => {
       this.search.emit(this.input.nativeElement.value);
     });
+
+    this.getCurrentUser();
   }
 
+  getCurrentUser(): User {
+    return this.auth.getCurrentUser();
+  }
+
+  logout(): void {
+    this.auth.logout();
+  }
 }

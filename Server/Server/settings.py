@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'API.apps.ApiConfig',
+    'rest_framework.authtoken',
 
     'rest_framework',
     'corsheaders',
@@ -58,6 +59,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Server.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'auth.authentication.ExpiringTokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+
+TOKEN_EXPIRED_AFTER_SECONDS = 86400,
 
 TEMPLATES = [
     {

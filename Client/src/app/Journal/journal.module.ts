@@ -7,6 +7,8 @@ import { JournalEntryComponent } from './components/journal-entry.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ResourceDialog } from './components/journal-new-resource.dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     JournalHeaderComponent,
     JournalEntryComponent,
     ResourceDialog,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   entryComponents: [
     ResourceDialog,
