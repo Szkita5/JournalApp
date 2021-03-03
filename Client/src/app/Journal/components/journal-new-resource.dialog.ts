@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import { NgbActiveModal, NgbDate, NgbDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgbActiveModal, NgbDate } from '@ng-bootstrap/ng-bootstrap';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons/faCalendar';
 import { Resource } from '../models/resource.model';
@@ -59,9 +59,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
         <button type="submit" class="btn btn-primary" [disabled]="!resourceForm.valid">Submit</button>
       </div>
     </form>
-
   `,
-  styles: []
 })
 export class ResourceDialog implements OnInit {
   faTimes = faTimes;
@@ -80,8 +78,6 @@ export class ResourceDialog implements OnInit {
   get dateCreated() { return this.resourceForm.get('dateCreated'); }
 
   ngOnInit(): void {
-
-    console.log(this.resource);
 
     this.resource ??= {
       name: '',

@@ -41,7 +41,6 @@ export class JournalHomeComponent implements OnInit {
     const instance = modalRef.componentInstance;
     instance.resource = $event;
     modalRef.result.then( result => {
-      console.log('before', result);
       this.api.updateResource(result).subscribe(res => {
         res.dateCreated = new Date(res.dateCreated);
         const index = this.resources.findIndex(resource => resource.id === res.id);
