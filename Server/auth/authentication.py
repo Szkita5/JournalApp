@@ -8,7 +8,6 @@ from django.conf import settings
 
 def expires_in(token):
     time_elapsed = timezone.now() - token.created
-    print(time_elapsed)
     left_time = timedelta(seconds=settings.TOKEN_EXPIRED_AFTER_SECONDS[0]) - time_elapsed
     return left_time
 

@@ -15,10 +15,9 @@ import { Router } from '@angular/router';
           <div class="container-fluid">
             <a class="navbar-brand">Journal</a>
             <div class="collapse navbar-collapse">
-              <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" [routerLink]="'/journal/'">Resources</a>
-                <a class="nav-link">Features</a>
-                <a class="nav-link">New resource</a>
+              <div *ngIf="getCurrentUser().username" class="navbar-nav">
+                <a class="nav-link" [routerLink]="'/journal/'">Resources</a>
+                <button class="btn nav-link" (click)="newResource.emit()">New resource</button>
               </div>
             </div>
             <form class="form-inline">
@@ -74,5 +73,6 @@ export class JournalHeaderComponent implements AfterViewInit {
 
   logout(): void {
     this.auth.logout();
+    this.router.navigate(['/login']);
   }
 }
