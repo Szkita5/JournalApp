@@ -1,0 +1,10 @@
+2021-03-04T12:37:56.574172Z 0 [Warning] [MY-011069] [Server] The syntax '--relay-log-info-file' is deprecated and will be removed in a future release.
+2021-03-04T12:37:56.576466Z 0 [System] [MY-010116] [Server] /rdsdbbin/mysql/bin/mysqld (mysqld 8.0.20) starting as process 5385
+2021-03-04T12:37:56.657551Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2021-03-04T12:37:56.669283Z 1 [Warning] [MY-012191] [InnoDB] Scan path '/rdsdbdata/db/innodb' is ignored because it is a sub-directory of '/rdsdbdata/db/
+2021-03-04T12:38:05.405883Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2021-03-04T12:38:07.765411Z 4 [System] [MY-013381] [Server] Server upgrade from '80019' to '80020' started.
+2021-03-04T12:38:21.379855Z 4 [System] [MY-013381] [Server] Server upgrade from '80019' to '80020' completed.
+2021-03-04T12:38:21.455021Z 0 [Warning] [MY-010075] [Server] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 810fc9bb-7ce6-11eb-9585-06c93b365cc6.
+2021-03-04T12:38:21.474332Z 0 [Warning] [MY-013414] [Server] Server SSL certificate doesn't verify: unable to get issuer certificate
+2021-03-04T12:38:21.511511Z 0 [System] [MY-010931] [Server] /rdsdbbin/mysql/bin/mysqld: ready for connections. Version: '8.0.20'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution.

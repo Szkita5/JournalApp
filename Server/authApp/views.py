@@ -47,6 +47,7 @@ def user_info(request):
     }, status=HTTP_200_OK)
 
 
+@permission_classes([AllowAny])
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

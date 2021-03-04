@@ -1,0 +1,322 @@
+Retrieving logs...
+============= i-0112ba63ff756a4a5 ==============
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Mar  4 14:32:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:32:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:32:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:32:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:32:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:32:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:33:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:33:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:34:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:34:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:35:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:35:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:36:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:36:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:51 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:37:56 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:37:56 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:06 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:06 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:11 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:11 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:21 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:21 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:26 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:26 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:36 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:36 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:41 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:41 ip-172-31-29-2 web: Bad Request: /
+Mar  4 14:38:51 ip-172-31-29-2 web: Invalid HTTP_HOST header: '172.31.29.2'. You may need to add '172.31.29.2' to ALLOWED_HOSTS.
+Mar  4 14:38:51 ip-172-31-29-2 web: Bad Request: /
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+172.31.28.19 - - [04/Mar/2021:14:26:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:26:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:26:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:26:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:26:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:27:05 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:27:10 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:27:20 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:27:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:27:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:27:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:27:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:27:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:28:05 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:28:10 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:28:20 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:28:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:28:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:28:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:28:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:28:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:29:05 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:29:10 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:29:20 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:29:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:29:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:29:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:29:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:29:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:30:05 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:30:10 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:30:20 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:30:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:30:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:30:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:30:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:30:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:31:05 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:31:10 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:31:20 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:31:25 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:31:35 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:31:40 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:31:50 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:31:55 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:32:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:32:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:32:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:32:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:32:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:32:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:32:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:32:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:33:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:33:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:33:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:33:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:33:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:33:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:33:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:33:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:34:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:34:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:34:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:34:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:34:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:34:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:34:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:34:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:35:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:35:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:35:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:35:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:35:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:35:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:35:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:35:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:36:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:36:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:36:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:36:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:36:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:36:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:36:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:36:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:37:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:37:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:37:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:37:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:37:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:37:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:37:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:37:56 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:38:06 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:38:11 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:38:21 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:38:26 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:38:36 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+172.31.28.19 - - [04/Mar/2021:14:38:41 +0000] "GET / HTTP/1.1" 400 58368 "-" "ELB-HealthChecker/2.0" "-"
+172.31.15.217 - - [04/Mar/2021:14:38:51 +0000] "GET / HTTP/1.1" 400 58370 "-" "ELB-HealthChecker/2.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2021/03/04 14:38:21.816336 [INFO] Download successful1250882bytes downloaded
+2021/03/04 14:38:21.816527 [INFO] Executing instruction: ElectLeader
+2021/03/04 14:38:21.816566 [INFO] Running leader election for instance i-0112ba63ff756a4a5...
+2021/03/04 14:38:21.816570 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2021/03/04 14:38:21.816583 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 84222aff-a58a-4f29-b96a-107be8ff4235 --listener-id i-0112ba63ff756a4a5 --region eu-west-2
+2021/03/04 14:38:22.156931 [INFO] Instance is Leader.
+2021/03/04 14:38:22.156976 [INFO] Executing instruction: stopSqsd
+2021/03/04 14:38:22.156982 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2021/03/04 14:38:22.156987 [INFO] Executing instruction: PreBuildEbExtension
+2021/03/04 14:38:22.157003 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2021/03/04 14:38:22.157018 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBAutoScalingGroup --region eu-west-2 --configsets Infra-EmbeddedPreBuild
+2021/03/04 14:38:23.659065 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2021/03/04 14:38:23.659087 [INFO] Executing instruction: StageApplication
+2021/03/04 14:38:23.665860 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2021/03/04 14:38:23.665884 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2021/03/04 14:38:23.705893 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2021/03/04 14:38:23.708154 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2021/03/04 14:38:23.708170 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2021/03/04 14:38:23.708175 [INFO] Executing instruction: InstallDependency
+2021/03/04 14:38:23.708181 [INFO] checking dependencies file
+2021/03/04 14:38:23.708187 [INFO] Installing dependencies with requirements.txt by using Pip
+2021/03/04 14:38:23.708200 [INFO] Running command /bin/sh -c /var/app/venv/staging-LQM1lest/bin/pip install -r requirements.txt
+2021/03/04 14:38:24.149715 [INFO] Requirement already satisfied: asgiref==3.3.1 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (3.3.1)
+Requirement already satisfied: Django==3.1.7 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 2)) (3.1.7)
+Requirement already satisfied: django-cors-headers==3.7.0 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 3)) (3.7.0)
+Requirement already satisfied: django-filter==2.4.0 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 4)) (2.4.0)
+Requirement already satisfied: djangorestframework==3.12.2 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 5)) (3.12.2)
+Requirement already satisfied: mysqlclient==2.0.3 in /var/app/venv/staging-LQM1lest/lib64/python3.8/site-packages (from -r requirements.txt (line 6)) (2.0.3)
+Requirement already satisfied: PyMySQL==1.0.2 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 7)) (1.0.2)
+Requirement already satisfied: pytz==2021.1 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 8)) (2021.1)
+Requirement already satisfied: sqlparse==0.4.1 in /var/app/venv/staging-LQM1lest/lib/python3.8/site-packages (from -r requirements.txt (line 9)) (0.4.1)
+
+2021/03/04 14:38:24.149986 [INFO] No dependency file found
+2021/03/04 14:38:24.149997 [INFO] Executing instruction: check Procfile
+2021/03/04 14:38:24.150055 [INFO] creating default Procfile...
+2021/03/04 14:38:24.150145 [INFO] Executing instruction: configure X-Ray
+2021/03/04 14:38:24.150151 [INFO] X-Ray is not enabled.
+2021/03/04 14:38:24.150156 [INFO] Executing instruction: configure proxy server
+2021/03/04 14:38:24.159427 [INFO] Executing instruction: configure healthd specific proxy conf
+2021/03/04 14:38:24.161002 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2021/03/04 14:38:24.165863 [WARN] Warning: process healthd is already registered...
+Deregistering the process ...
+2021/03/04 14:38:24.165879 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2021/03/04 14:38:24.170061 [INFO] Running command /bin/sh -c systemctl is-active healthd.service
+2021/03/04 14:38:24.173829 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2021/03/04 14:38:24.177960 [INFO] Running command /bin/sh -c systemctl stop healthd.service
+2021/03/04 14:38:24.193614 [INFO] Running command /bin/sh -c systemctl disable healthd.service
+2021/03/04 14:38:24.295850 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2021/03/04 14:38:24.385671 [INFO] Running command /bin/sh -c systemctl reset-failed
+2021/03/04 14:38:24.392151 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2021/03/04 14:38:24.465195 [INFO] Running command /bin/sh -c systemctl reset-failed
+2021/03/04 14:38:24.469042 [INFO] Running command /bin/sh -c systemctl is-enabled aws-eb.target
+2021/03/04 14:38:24.472706 [INFO] Running command /bin/sh -c systemctl enable aws-eb.target
+2021/03/04 14:38:24.549314 [INFO] Running command /bin/sh -c systemctl start aws-eb.target
+2021/03/04 14:38:24.553699 [INFO] Running command /bin/sh -c systemctl enable healthd.service
+2021/03/04 14:38:24.634005 [INFO] Running command /bin/sh -c systemctl show -p PartOf healthd.service
+2021/03/04 14:38:24.639109 [INFO] Running command /bin/sh -c systemctl is-active healthd.service
+2021/03/04 14:38:24.642803 [INFO] Running command /bin/sh -c systemctl start healthd.service
+2021/03/04 14:38:24.665126 [INFO] Copying file /opt/elasticbeanstalk/config/private/healthd/healthd_logformat.conf to /var/proxy/staging/nginx/conf.d/healthd_logformat.conf
+2021/03/04 14:38:24.666524 [INFO] Copying file /opt/elasticbeanstalk/config/private/healthd/healthd_nginx.conf to /var/proxy/staging/nginx/conf.d/elasticbeanstalk/healthd.conf
+2021/03/04 14:38:24.667609 [INFO] Executing instruction: configure log streaming
+2021/03/04 14:38:24.667618 [INFO] log streaming is not enabled
+2021/03/04 14:38:24.667622 [INFO] disable log stream
+2021/03/04 14:38:24.667634 [INFO] Running command /bin/sh -c systemctl show -p PartOf amazon-cloudwatch-agent.service
+2021/03/04 14:38:24.676984 [INFO] Running command /bin/sh -c systemctl stop amazon-cloudwatch-agent.service
+2021/03/04 14:38:24.687810 [INFO] Executing instruction: GetToggleForceRotate
+2021/03/04 14:38:24.687824 [INFO] Checking if logs need forced rotation
+2021/03/04 14:38:24.687838 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBAutoScalingGroup --region eu-west-2
+2021/03/04 14:38:25.294416 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBBeanstalkMetadata --region eu-west-2
+2021/03/04 14:38:25.745916 [INFO] Generating rsyslog config from Procfile
+2021/03/04 14:38:25.747300 [INFO] Running command /bin/sh -c systemctl restart rsyslog.service
+2021/03/04 14:38:25.765456 [INFO] Executing instruction: PostBuildEbExtension
+2021/03/04 14:38:25.765479 [INFO] Starting executing the config set Infra-EmbeddedPostBuild.
+2021/03/04 14:38:25.765491 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBAutoScalingGroup --region eu-west-2 --configsets Infra-EmbeddedPostBuild
+2021/03/04 14:38:26.157811 [ERROR] An error occurred during execution of command [app-deploy] - [PostBuildEbExtension]. Stop running the command. Error: Container commands build failed. Please refer to /var/log/cfn-init.log for more details. 
+
+2021/03/04 14:38:26.157833 [INFO] Executing cleanup logic
+2021/03/04 14:38:26.157924 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1614868704,"severity":"INFO"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1614868706,"severity":"ERROR"}]}]}
+
+2021/03/04 14:38:26.158988 [INFO] Platform Engine finished execution on command: app-deploy
+
+2021/03/04 14:38:53.248529 [INFO] Starting...
+2021/03/04 14:38:53.248578 [INFO] Starting EBPlatform-PlatformEngine
+2021/03/04 14:38:53.248594 [INFO] reading event message file
+2021/03/04 14:38:53.248696 [INFO] no eb envtier info file found, skip loading env tier info.
+2021/03/04 14:38:53.248755 [INFO] Engine received EB command cfn-hup-exec
+
+2021/03/04 14:38:53.335326 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBAutoScalingGroup --region eu-west-2
+2021/03/04 14:38:53.686725 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:eu-west-2:975043573128:stack/awseb-e-yfnttpwmtg-stack/7c3954f0-7ce1-11eb-ab64-0a43265a7788 -r AWSEBBeanstalkMetadata --region eu-west-2
+2021/03/04 14:38:53.981636 [INFO] checking whether command tail-log is applicable to this instance...
+2021/03/04 14:38:53.981650 [INFO] this command is applicable to the instance, thus instance should execute command
+2021/03/04 14:38:53.981654 [INFO] Engine command: (tail-log)
+
+2021/03/04 14:38:53.981701 [INFO] Executing instruction: GetTailLogs
+2021/03/04 14:38:53.981706 [INFO] Tail Logs...
+2021/03/04 14:38:53.981944 [INFO] Running command /bin/sh -c tail -n 100 /var/log/web.stdout.log
+2021/03/04 14:38:53.983638 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/access.log
+2021/03/04 14:38:53.985154 [INFO] Running command /bin/sh -c tail -n 100 /var/log/nginx/error.log
+2021/03/04 14:38:53.986653 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+

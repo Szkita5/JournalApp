@@ -27,7 +27,10 @@ SECRET_KEY = '7+59*bn50zl_w5*5$p-1*#ae3j=g%g#7%u6mt6k4mefe6su*xh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'journalserver.eu-west-2.elasticbeanstalk.com',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'API.apps.ApiConfig',
     'rest_framework.authtoken',
+    'authApp.apps.AuthConfig',
 
     'rest_framework',
     'corsheaders',
@@ -62,7 +66,7 @@ ROOT_URLCONF = 'Server.urls'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'auth.authentication.ExpiringTokenAuthentication',
+        'authApp.authentication.ExpiringTokenAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
@@ -99,16 +103,29 @@ CORS_ALLOWED_ORIGINS = [
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'JournalApp',
-        'USER': 'geory',
-        'PASSWORD': 'Ger_023344',
-        'HOST': 'localhost',
-        'PORT': '3306',
+
+if 'RDS_HOSTNAME' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'JournalApp',
+            'USER': 'geory',
+            'PASSWORD': 'Ger_023344',
+            'HOST': 'localhost',
+            'PORT': '3306',
+        }
+    }
 
 
 # Password validation
@@ -148,3 +165,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static'

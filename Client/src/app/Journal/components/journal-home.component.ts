@@ -7,14 +7,15 @@ import { DialogService } from '../../../services/dialog.service';
 @Component({
   selector: 'journal-home',
   template: `
-    <journal-header (search)="searchResources($event)"></journal-header>
+    <journal-header (search)="searchResources($event)" (newResource)="addResource()"></journal-header>
     <div class="container">
       <journal-entry *ngFor="let resource of resources"
                      [resource]="resource"
                      (editClicked)="editResource($event)"
-                     (deleteClicked)="deleteResource($event)">
+                     (deleteClicked)="deleteResource($event)"
+                     (openClicked)="openResource($event)">
       </journal-entry>
-      <button class="btn btn-outline-primary" (click)="addResource()">New resource</button>
+<!--      <button class="btn btn-outline-primary" (click)="addResource()">New resource</button>-->
     </div>
   `,
   styles: [``]
@@ -72,5 +73,15 @@ export class JournalHomeComponent implements OnInit {
       res.forEach( resource => resource.dateCreated = new Date(resource.dateCreated));
       this.resources = res;
     });
+  }
+
+  openResource(resource: Resource) {
+    window.open(resource.url);
+    resource.dateCreated = new Date();
+    this.api.updateResource(resource).subscribe(res => {
+        res.dateCreated = new Date(res.dateCreated);
+        const index = this.resources.findIndex(r => r.id === res.id);
+        this.resources[index] = res;
+      });
   }
 }

@@ -10,7 +10,7 @@ import { tap } from 'rxjs/operators';
 export class AuthenticationService {
 
   user: User;
-  private readonly baseUrl = 'http://localhost:8000/';
+  private readonly baseUrl = 'http://journalserver.eu-west-2.elasticbeanstalk.com/';
 
   constructor(private http: HttpClient) {
     this.user = new User();

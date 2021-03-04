@@ -2,7 +2,7 @@ from rest_framework import viewsets, permissions
 from .serializers import ResourceSerializer
 from .models import Resource
 from rest_framework import filters, authentication
-from auth.permissions import IsOwner
+from authApp.permissions import IsOwner
 
 
 class ResourceViewSet(viewsets.ModelViewSet):

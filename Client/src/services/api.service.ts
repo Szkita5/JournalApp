@@ -10,7 +10,7 @@ import { AuthenticationService } from './authentication.service';
 })
 export class ApiService {
 
-  private readonly baseUrl = 'http://localhost:8000/';
+  private readonly baseUrl = 'http://journalserver.eu-west-2.elasticbeanstalk.com/';
 
   constructor(private http: HttpClient, private auth: AuthenticationService) {
   }
