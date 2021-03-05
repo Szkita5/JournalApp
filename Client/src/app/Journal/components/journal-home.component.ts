@@ -51,7 +51,7 @@ export class JournalHomeComponent implements OnInit {
   }
 
   deleteResource($event: Resource): void {
-    this.api.deleteResource($event.id).subscribe( response => console.log(response));
+    this.api.deleteResource($event.id).subscribe();
     const resIndex = this.resources.findIndex(resource => resource === $event);
     if (resIndex > 0) {
       this.resources.splice(resIndex, 1);

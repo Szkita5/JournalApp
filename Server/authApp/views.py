@@ -10,7 +10,7 @@ from rest_framework.status import (
 )
 from rest_framework.response import Response
 
-from .serializers import UserSerializer, UserSigninSerializer
+from .serializers import UserSerializer, UserSigninSerializer, UserRegisterSerializer
 from .authentication import token_expire_handler, expires_in
 
 
@@ -39,6 +39,34 @@ def signin(request):
     }, status=HTTP_200_OK)
 
 
+@api_view(["POST"])
+@permission_classes([AllowAny])
+def register(request):
+    register_serializer = UserRegisterSerializer(data=request.data)
+    if not register_serializer.is_valid():
+        return Response(register_serializer.errors, status=HTTP_400_BAD_REQUEST)
+
+    if not register_serializer.data['password'] == register_serializer.data['confirm_password']:
+        return Response({'detail': 'Passwords must match'}, status=HTTP_400_BAD_REQUEST)
+
+    if User.objects.filter(username=register_serializer.data['username']).exists():
+        return Response({'detail': 'Username already exists'}, status=HTTP_400_BAD_REQUEST)
+    else:
+        user = User.objects.create_user(register_serializer.data['username'],
+                                        register_serializer.data['email'],
+                                        register_serializer.data['password'])
+
+    token, _ = Token.objects.get_or_create(user=user)
+    is_expired, token = token_expire_handler(token)
+    user_serialized = UserSerializer(user)
+
+    return Response({
+        'user': user_serialized.data,
+        'expires_in': expires_in(token),
+        'token': token.key
+    }, status=HTTP_200_OK)
+
+
 @api_view(["GET"])
 def user_info(request):
     return Response({
@@ -47,7 +75,6 @@ def user_info(request):
     }, status=HTTP_200_OK)
 
 
-@permission_classes([AllowAny])
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

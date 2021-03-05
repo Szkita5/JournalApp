@@ -28,8 +28,9 @@ SECRET_KEY = '7+59*bn50zl_w5*5$p-1*#ae3j=g%g#7%u6mt6k4mefe6su*xh'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'journalserver.eu-west-2.elasticbeanstalk.com',
     '127.0.0.1',
+    'localhost',
+    'journalserver.eu-west-2.elasticbeanstalk.com',
 ]
 
 

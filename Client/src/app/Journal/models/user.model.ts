@@ -9,6 +9,13 @@ export interface UserLoginForm {
   password: string;
 }
 
+export interface UserRegisterForm {
+  username: string;
+  email: string;
+  password: string;
+  confirm_password: string;
+}
+
 export interface UserLoginResponse {
   user: {
     id: string;

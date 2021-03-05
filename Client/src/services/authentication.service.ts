@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User, UserLoginForm, UserLoginResponse } from '../app/journal/models/user.model';
+import {User, UserLoginForm, UserLoginResponse, UserRegisterForm} from '../app/journal/models/user.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
@@ -10,6 +10,7 @@ import { tap } from 'rxjs/operators';
 export class AuthenticationService {
 
   user: User;
+  // private readonly baseUrl = 'http://localhost:8000/';
   private readonly baseUrl = 'http://journalserver.eu-west-2.elasticbeanstalk.com/';
 
   constructor(private http: HttpClient) {
@@ -25,16 +26,27 @@ export class AuthenticationService {
     return this.sendLoginRequest(loginDetails).pipe(
       tap(response => {
         if (response.user) {
-        console.log(response);
         this.user.id = response.user.id;
         this.user.username = response.user.username;
         this.user.token = response.token;
 
         this.saveUserToStorage(response);
         this.calculateTokenExpiry(response);
-        return Promise.resolve();
-        } else {
-          return Promise.reject();
+        }
+      })
+    );
+  }
+
+  public register(registrationDetails: UserRegisterForm): Observable<UserLoginResponse> {
+    return this.sendRegisterRequest(registrationDetails).pipe(
+      tap(response => {
+        if (response.user) {
+        this.user.id = response.user.id;
+        this.user.username = response.user.username;
+        this.user.token = response.token;
+
+        this.saveUserToStorage(response);
+        this.calculateTokenExpiry(response);
         }
       })
     );
@@ -75,6 +87,10 @@ export class AuthenticationService {
 
   private sendLoginRequest(loginDetails: UserLoginForm): Observable<UserLoginResponse> {
     return this.http.post<UserLoginResponse>(this.baseUrl + 'auth/login/', loginDetails);
+  }
+
+  private sendRegisterRequest(registrationDetails: UserRegisterForm): Observable<UserLoginResponse> {
+    return this.http.post<UserLoginResponse>(this.baseUrl + 'auth/register/', registrationDetails);
   }
 
   private loadCachedUser(): void {

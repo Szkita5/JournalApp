@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Resource } from '../models/resource.model';
 import { faEdit, faTrashAlt, faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
@@ -59,7 +59,7 @@ import { faEdit, faTrashAlt, faChevronRight, faChevronDown } from '@fortawesome/
     }
   `]
 })
-export class JournalEntryComponent implements OnInit {
+export class JournalEntryComponent {
   faEdit = faEdit;
   faTrashAlt = faTrashAlt;
   faChevronRight = faChevronRight;
@@ -72,10 +72,6 @@ export class JournalEntryComponent implements OnInit {
   @Output() openClicked = new EventEmitter<Resource>();
 
   constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.resource);
-  }
 
   openResource(resource: Resource): void {
     this.openClicked.emit(resource);
