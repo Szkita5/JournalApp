@@ -122,7 +122,7 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'JournalApp',
             'USER': 'geory',
-            'PASSWORD': 'UPDATE THIS',
+            'PASSWORD': 'UPDATE THIS G**_*****4',
             'HOST': 'localhost',
             'PORT': '3306',
         }
