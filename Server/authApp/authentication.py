@@ -34,9 +34,6 @@ class ExpiringTokenAuthentication(TokenAuthentication):
         except Token.DoesNotExist:
             raise AuthenticationFailed("Invalid Token")
 
-        if not token.user.is_active:
-            raise AuthenticationFailed("Inactive user")
-
         is_expired, token = token_expire_handler(token)
         if is_expired:
             raise AuthenticationFailed("Session expired")

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {User, UserLoginForm, UserLoginResponse, UserRegisterForm} from '../app/journal/models/user.model';
+import { User, UserLoginForm, UserLoginResponse, UserRegisterForm } from '../app/journal/models/user.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
